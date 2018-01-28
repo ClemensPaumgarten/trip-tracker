@@ -1,0 +1,84 @@
+@import './custom-mixins.scss';
+@import './custom-variables.scss';
+
+.sidebarComponent {
+  position: absolute;
+  width: 350px;
+  top: 50px;
+  bottom: 0;
+  transition: right 0.4s ease-in-out,
+  width 0.2s ease-in;
+
+  @media screen and (max-width: 400px) {
+    width: 100vw;
+  }
+
+  &.sidebarOpen {
+    right: 0;
+  }
+
+  &.sidebarClosed {
+    right: -350px;
+
+    @media screen and (max-width: 400px) {
+      right: -100vw;
+    }
+  }
+}
+
+.filterContainer {
+  text-align: center;
+  @include padding-vert(20px);
+}
+
+.blogListContainer {
+  overflow-y: scroll;
+  background: $white;
+
+  @include box-shadow-custom();
+}
+
+.noBlogs {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blogListHeaderContainer {
+  color: #fff;
+  background: $primary-dark-gray;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+
+  @include padding-horiz(15px);
+  @include box-shadow-bottom();
+}
+
+.blogList {
+  border-top: 1px solid $primary-dark-gray;
+}
+
+.blogEntry {
+  border-bottom: none;
+  box-shadow: 0 1px 5px 0 $primary-dark-gray;
+  cursor: pointer;
+  min-height: 60px;
+  line-height: 60px;
+  margin: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  text-align: center;
+  transition: background .25s;
+
+  &:hover {
+    background: $primary-blue-gray;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+

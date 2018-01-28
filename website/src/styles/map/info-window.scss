@@ -1,0 +1,31 @@
+@import '../custom-mixins.scss';
+@import '../custom-variables.scss';
+
+.infoWindow {
+  padding: 10px;
+  width: 200px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid $primary-black;
+}
+
+.content {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.blogLink {
+  color: $primary-black;
+  text-decoration: none !important;
+  line-height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+
+  @include padding-vert(5px);
+  @include padding-horiz(10px);
+  @include slideUpAnim($white, $primary-green, .2s);
+}

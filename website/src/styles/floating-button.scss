@@ -1,0 +1,18 @@
+@import './custom-mixins.scss';
+@import './custom-variables.scss';
+
+.floatingButton {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: $primary-red;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px $primary-dark-gray;
+}
+
+.children {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

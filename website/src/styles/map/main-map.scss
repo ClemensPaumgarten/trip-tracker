@@ -1,0 +1,39 @@
+@import '../custom-mixins.scss';
+@import '../custom-variables.scss';
+
+.map {
+  height: 100%;
+}
+
+.loaderContainer {
+  @include full-screen;
+}
+
+.loaderElement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  height: 100vh;
+}
+
+.offlineMap {
+  position: absolute;
+  background: blue;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  span {
+    position: absolute;
+    font-weight: 600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+

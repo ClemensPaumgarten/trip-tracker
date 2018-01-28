@@ -1,0 +1,19 @@
+@import '../custom-mixins.scss';
+@import '../custom-variables.scss';
+
+.imageDropzone {
+  position: relative;
+  height: 250px;
+  border: 1px dashed $primary-dark-gray;
+  text-align: center;
+
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include margin-horiz(auto);
+}
+
+.dropzoneTitle {
+  @include alignMiddle();
+}

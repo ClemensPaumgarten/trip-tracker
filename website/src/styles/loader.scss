@@ -1,0 +1,17 @@
+@import './custom-variables';
+
+.loaderContainer {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  background-color: rgba(243, 245, 247, 0.5);
+
+  img {
+    width: 50px;
+  }
+}

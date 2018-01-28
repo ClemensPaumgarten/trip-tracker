@@ -1,0 +1,19 @@
+@import '../custom-mixins.scss';
+
+.imageContainer {
+  composes: contentContainer from './cms-page.scss';
+  width: 100%;
+  text-align: center;
+
+  @include padding-horiz(20px);
+}
+
+.image {
+  width: auto;
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.loader {
+  min-height: 250px;
+}

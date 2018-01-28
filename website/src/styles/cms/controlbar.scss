@@ -1,0 +1,43 @@
+@import '../custom-variables.scss';
+@import '../custom-mixins.scss';
+
+.controlbarContainer {
+  border-bottom: 1px solid $primary-blue-gray;
+  background: $primary-white;
+
+  @include padding-horiz(10vw);
+  @include padding-vert(15px);
+
+  @media screen and (max-width: 416px) {
+    text-align: center;
+
+    .customDropdownContainer {
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+.dropdownToggle {
+  width: 100%;
+}
+
+.customDropdownContainer {
+  display: inline-block;
+  @include margin-horiz(15px);
+}
+
+.controlbarButtons {
+  float: right;
+
+  button {
+    @include margin-horiz(5px);
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+}

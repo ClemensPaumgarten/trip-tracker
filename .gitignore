@@ -1,0 +1,12 @@
+# npm
+node_modules
+
+# generated assets
+website/assets/javascript
+website/assets/css
+
+g-key.json
+user.json
+
+# idea
+.idea

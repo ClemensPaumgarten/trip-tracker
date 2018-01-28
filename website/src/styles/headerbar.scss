@@ -1,0 +1,85 @@
+@import './custom-mixins.scss';
+@import './custom-variables.scss';
+
+.headerbarContainer {
+  position: fixed;
+  background-color: $primary-green;
+  color: $white;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  @include box-shadow-bottom();
+}
+
+.bar {
+  height: 50px;
+  line-height: 50px;
+
+  @include padding-horiz(20px);
+
+  @media screen and (min-width: $bp-small) {
+    @include padding-horiz(40px);
+
+  }
+
+}
+
+.navigationBar {
+  composes: bar;
+  font-size: 18px;
+}
+
+.notificationBar {
+  composes: bar;
+
+  text-align: center;
+}
+
+.notification-danger {
+  background-color: $primary-red;
+}
+
+.notification-warning {
+  background-color: yellow;
+}
+
+.notification-success {
+  background-color: $primary-green;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: $white;
+  text-decoration: none !important;
+  height: 50px;
+
+  @include padding-horiz(15px);
+  @include slideUpAnim($primary-green, $white, .2s);
+
+  background-size: 100% 204%; // size issues with headerbar
+
+  &.login {
+    float: right;
+  }
+}
+
+.linkIcon {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 2px;
+}
+
+.linkRight {
+  float: right;
+}
+
+.headerbarMainNav {
+  width: 50%;
+  background: red;
+
+  @include margin-horiz(auto);
+}

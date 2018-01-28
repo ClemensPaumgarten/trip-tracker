@@ -1,0 +1,24 @@
+//@import './icons';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+ul {
+  padding-left: 15px;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
+img {
+  transition: opacity .2s;
+  opacity: 1;
+}
+
+:global(.content-container) {
+  position: relative;
+}

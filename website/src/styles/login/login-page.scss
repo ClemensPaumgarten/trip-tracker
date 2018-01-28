@@ -1,0 +1,8 @@
+@import '../custom-mixins.scss';
+
+.loginContainer {
+  margin-top: 100px;
+  width: 400px;
+  @include margin-horiz(auto);
+}
+

@@ -1,0 +1,63 @@
+@mixin full-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin margin-vert($top: 0px, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin margin-horiz($left: 0px, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin padding-vert($top: 0px, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin padding-horiz($left: 0px, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin box-shadow-bottom($color: $primary-dark-gray) {
+  -webkit-box-shadow: 0px 1px 10px 0px $color;
+  -moz-box-shadow: 0px 1px 10px 0px $color;
+  box-shadow: 0px 1px 10px 0px $color;
+}
+
+@mixin box-shadow-custom($size: 0px 0px 10px 0px, $color: $primary-dark-gray) {
+  -webkit-box-shadow: $size $color;
+  -moz-box-shadow: $size $color;
+  box-shadow: $size $color;
+}
+
+@mixin alignMiddleHorizontally() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin alignMiddle() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin slideUpAnim($primColor, $secColor, $animationTime: .2, $colorHover: $primColor) {
+  transition: color .2s, background-position-y .2s;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, $primColor 50%, $secColor 50%);
+
+  &:hover {
+    color: $colorHover;
+    background-position-y: 100%;
+  }
+}

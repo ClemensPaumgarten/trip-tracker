@@ -1,0 +1,83 @@
+@import '../custom-mixins.scss';
+@import '../custom-variables.scss';
+
+.blogContainerInner {
+  width: 55%;
+  padding-top: 40px;
+  color: $primary-dark-gray;
+
+  @include margin-horiz(auto);
+
+  @media screen and (max-width: $bp-small) {
+    width: 90%;
+    @include margin-horiz(15px);
+  }
+}
+
+.title {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: $primary-black;
+}
+
+.textBlock {
+  font-size: 16px;
+  line-height: 1.9em;
+  margin-top: 15px;
+}
+
+.imageContainer {
+  text-align: center;
+  @include margin-vert(50px);
+
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+  }
+}
+
+/**
+ *
+ *
+ * Headerbar
+ *
+ */
+
+.headerlink {
+  composes: link from '../headerbar.scss';
+
+}
+
+.desktopBacklink {
+  composes: headerlink;
+
+  @media screen and (max-width: $bp-small) {
+    display: none;
+  }
+}
+
+.mobileBacklink {
+  composes: headerlink;
+
+  text-align: center;
+  width: 50px;
+
+  @include padding-horiz(10px);
+  @media screen and (min-width: $bp-small) {
+    display: none;
+  }
+}
+
+.loaderContainer {
+  composes: loaderContainer from '../loader.scss';
+
+  background: none;
+  z-index: 1;
+
+  img {
+    width: 50px;
+  }
+}

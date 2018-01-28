@@ -1,0 +1,33 @@
+@import '../custom-mixins.scss';
+@import '../custom-variables.scss';
+
+.container {
+  @include margin-vert(10px);
+}
+
+.textBlock {
+  display: block;
+  border: none;
+  box-shadow: 0px 1px 5px 0px $primary-dark-gray;
+  outline: none;
+  padding: 5px;
+  color: $primary-black;
+}
+
+.title {
+  composes: textBlock;
+
+  font-size: 20px;
+  width: 50%;
+  @include margin-vert(25px);
+}
+
+.textarea {
+  composes: textBlock;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.content {
+  width: 100%;
+}
